@@ -1,5 +1,5 @@
 // Get all elements with class 'count'
-var countElements = document.querySelectorAll('.count');
+var countElements = document.querySelectorAll('.impact-count');
 
 // Define the animation duration in milliseconds
 var animationDuration = 20000;
@@ -37,4 +37,34 @@ menu.onclick = () => {
   navbar.classList.toggle('active');
 };
 
+//image slider js
+/*const carousel = document.querySelector('.carousel-image');
+const images = document.querySelectorAll('.carousel-item');
+let counter = 0;
+const size = images[0].clientWidth;
 
+carousel.style.transform = `translateX(${-size * counter}px)`;
+
+setInterval(() => {
+  if (counter >= images.length - 1) {
+    counter = 0;
+    carousel.style.transition = 'none';
+    carousel.style.transform = `translateX(${-size * counter}px)`;
+  }
+  counter++;
+  carousel.style.transition = 'transform 0.5s ease-in-out';
+  carousel.style.transform = `translateX(${-size * counter}px)`;
+}, 5000);*/
+
+/*carousel.addEventListener('transitionend', () => {
+  if (images[counter].id === 'last-clone') {
+    carousel.style.transition = 'none';
+    counter = images.length - 2;
+    carousel.style.transform = `translateX(${-size * counter}px)`;
+  }
+  if (images[counter].id === 'first-clone') {
+    carousel.style.transition = 'none';
+    counter = images.length - counter;
+    carousel.style.transform = `translateX(${-size * counter}px)`;
+  }
+});*/

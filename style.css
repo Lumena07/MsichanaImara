@@ -22,7 +22,7 @@ html{
 body{
 	background:#f7f7f7;
 }
-
+/*header CSS starts*/
 header {
     display: flex;
     justify-content: space-between;
@@ -53,7 +53,7 @@ header {
     color: #A1045A;
   }
   
-  button {
+  .navbar button {
     background-color:white;
     padding: 10px;
     cursor: pointer;
@@ -69,7 +69,7 @@ header {
 	overflow: hidden;
 	z-index: 0;
   }
-button::before{
+.navbar button::before{
 	content:'';
 	position: absolute;
 	top: 0; right: 0;
@@ -79,12 +79,12 @@ button::before{
 	transition: .3s linear;
 	z-index: -1;
 }
-button:hover::before{
+.navbar button:hover::before{
      
      width: 100%;
      left: 0;
 }
-button:hover{
+.navbar button:hover{
 	color: white;
 }
   
@@ -96,29 +96,31 @@ button:hover{
 	border-radius: .3rem;
 	padding: .5rem 1.5rem;
   }
+  /*header CSS ends*/
+  /*welcome section  CSS starts*/
   .welcome {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
     background-size: cover;
     height: 100vh;
 }
   
-  .content {
+  .welcome-section-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .content h4{
+  .welcome-section-content h4{
       color:white;
   }
-  .content h1{
+  .welcome-section-content h1{
        color: white;
       font-size: 2.7rem;
       padding-top: 10px;
   }
   
-  .strip {
+  .welcome-section-strip {
     display: flex;
     justify-content: space-around;
     position: absolute;
@@ -127,7 +129,7 @@ button:hover{
     right: 0;
     height: 9.5rem;
 }
-  .strip > div {
+  .welcome-section-strip > div {
     width: 33.33%;
     display: flex;
     flex-direction: column;
@@ -136,23 +138,23 @@ button:hover{
     margin: 0;
     border:1px solid #4C0121;
   }
-  .strip > div:hover {
+  .welcome-section-strip > div:hover {
     background-color: wheat;
     transition: background-color 0.5s ease;
   }
-  .strip .mission {
+  .welcome-section-strip .mission {
     background-color: #FDF6E4;
   }
   
-  .strip .projects {
+  .welcome-section-strip .projects {
     background-color: #FFF1E6;
   }
   
-  .strip .volunteer {
+  .welcome-section-strip .volunteer {
     background-color: #FCFBFC;
   }
   
-  .strip h2 {
+  .welcome-section-strip h2 {
     font-size: 2.4rem;
     margin-top:15px;
     padding-top: 5px;
@@ -160,13 +162,14 @@ button:hover{
 
   }
   
-  .strip h4 {
+  .welcome-section-strip h4 {
     font-size: 1.4rem;
     color:#4C0121;
     margin-top:10px;
 }
+/*welcome section CSS ends*/
   
-
+/*sucess stories CSS starts*/
 .sucess-stories {
     background-color: #A1045A;;
     color: white;
@@ -176,7 +179,7 @@ button:hover{
     padding: 50px 0;
     
 }
-  .box-container-2 {
+  .sucess-stories-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -184,11 +187,11 @@ button:hover{
     
   }
   
-  .box-1 {
+  .container-left {
     flex-basis: 50%;
    padding-left:30px;
 }
-.heading  {
+.container-left-heading  {
     color: white;
     font-weight: bold;
     font-size: 5rem;
@@ -196,79 +199,73 @@ button:hover{
     margin-bottom:20px;
     margin-top:20px;
 }
-  .content-2{
+  .container-left-content{
     margin-top:20px;
   }
-  .content-2 h2{
+  .container-left-content h2{
     font-size: 2rem;
     margin-bottom: 20px;
     padding-bottom: 20px;
   }
-  .content-2 p{
+  .container-left-content p{
     font-size: 1.2rem;
     margin-bottom: 35px;
     line-height: 1.5;
   }
-  .box-2{
+  .container-right{
     flex-basis: 40%;
   }
   
- .box-2 .image {
+ .container-right-image {
     width: 600px;
     height: 100%;
     padding-right: 20px;
   }
-  
-.box-container {
+  /*sucess stories CSS ends*/
+
+  /*impact CSS starts*/
+  .impact-box-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 20px;
     
   }
-  
-  .numbers{
-    flex-basis: 45%;
-  }
-  
-  .content-3 {
+  .impact-content-left {
     margin: 10px 0;
     flex-basis: 45%;
 }
- 
-  
-  .content-3 h1 {
+  .impact-content-left h1 {
     margin-bottom: 50px;
     font-size: 4.5rem;
     text-transform: none;
     font-weight: bold;
     color: #4C0121;
-
   }
-  
-  .content-3 p {
+  .impact-content-left p {
     line-height: 1.5;
     font-size: 1.5rem;
   }
-  
-  
-  .row {
+  .impact-right-numbers{
+    flex-basis: 45%;
+  }
+.impact-right-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 10px 0;
   }
   
-  .col {
+  .impact-right-col {
     flex-basis: 33%;
     text-align: center;
     padding-left:1rem;
   }
-  .col p{
+  .impact-right-col p{
     color: #4C0121;
   }
   
-  .count {
+  .impact-count {
     font-size: 45px;
     font-weight: bold;
     color: #A1045A;
@@ -284,6 +281,8 @@ button:hover{
   .center {
     text-align: center;
   }
+  /*impact CSS ends*/
+  /*image CSS starts*/
   .images {
     display: flex;
     flex-wrap: wrap;
@@ -297,7 +296,8 @@ button:hover{
     height: 450px;
     
   }
- 
+  /*impact CSS ends*/
+  /*donate CSS starts*/
   .donate {
     background-color: #A1045A;
     color: white;
@@ -351,6 +351,9 @@ button:hover{
 .donate-btn:hover{
 	color: white;
 }
+/*donate CSS ends*/
+
+/*footer CSS starts*/
   footer {
     background-color: #333;
     color: #fff;
@@ -476,6 +479,175 @@ button a{
     border: 1px solid #fff;
     margin-bottom: 10px;
   }
+  /*footer CSS ends*/
+
+
+  /*aboutus CSS*/
+  /*sucess stories content-2 css*/
+  .who-we-are {
+    background-color: #A1045A;;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+  .content-2 {
+    text-align: center; /* Center align the heading */
+  }
+  
+  .content-2 h2 {
+    font-size: 2.9rem; /* Set the font size for the heading */
+    padding:20px 0;
+  }
+  
+  .content-2 p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    padding-bottom: 20px; /* Set the font size for the paragraph */
+  }
+  /*our story css*/
+  .our-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .our-story-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .our-story-content {
+    grid-column: 1 / 2;
+  }
+  
+  .our-story-img {
+    grid-column: 2 / 3;
+  }
+  
+  
+
+
+
+    /*projects CSS*/
+    .welcome-to-projects {
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
+      background-size: cover;
+      height: 50vh;
+      position: relative; /* add position relative to set position absolute for .welcome-to-projects-content */
+    }
+    
+    .welcome-to-projects-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .welcome-to-projects-content h1 {
+      color: white;
+      font-size: 3.5rem;
+      padding-top: 10px;
+    }
+/*mawimbi CSS starts*/
+.mawimbi {
+  background-color: #A1045A;;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+ flex-direction: column;
+}
+ .mawimbi h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .mawimbi p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 20px;
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+  
+/*mawimbi CSS end */
+ /*mawimbi-image slider CSS starts*/
+ .mawimbi-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  height: 1200px;
+  width: 100vw;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  height: 600px;
+  width:100vw;
+}
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+.carousel-item img {
+  width: 100px;
+  height: 100px;
+}
+
+/* mawimbi-image slider CSS ends */
+/*imarika CSS starts*/
+.imarika {
+  color: #4C0121;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+ flex-direction: column;
+}
+ .imarika  h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #A1045A;
+  }
+  
+  .imarika p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    text-align: justify;
+    margin-bottom: 10px;
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+  
+/*imarika CSS end */
+.imarika-image-kubwa img {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+}
+
   
   @media screen and (max-width: 768px) {
     #menu-bar {
@@ -513,6 +685,8 @@ button a{
       cursor: pointer;
       
     }
+    
+    
   }
   
   
