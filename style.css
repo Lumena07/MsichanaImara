@@ -46,7 +46,7 @@ header {
     text-decoration: none;
     padding: 10px;
     font-size: 1.1rem;
-    margin-left: 2rem;
+    margin-left:20px;
 	color:white;
   }
   .navbar a:hover {
@@ -57,7 +57,7 @@ header {
     background-color:white;
     padding: 10px;
     cursor: pointer;
-    margin-left:30px;
+    margin-left:5px;
     margin-right: 0px;
     color: #A1045A;
     font-weight: bold;
@@ -188,24 +188,24 @@ header {
   }
   
   .container-left {
-    flex-basis: 50%;
-   padding-left:30px;
+    flex:1;
+   padding-left:10px;
 }
 .container-left-heading  {
     color: white;
     font-weight: bold;
-    font-size: 5rem;
-    padding-bottom: 20px;
-    margin-bottom:20px;
-    margin-top:20px;
+    font-size: 4.5rem;
+    padding-bottom: 15px;
+    margin-bottom:15px;
+    margin-top:10px;
 }
   .container-left-content{
-    margin-top:20px;
+    margin-top:10px;
   }
   .container-left-content h2{
     font-size: 2rem;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
   }
   .container-left-content p{
     font-size: 1.2rem;
@@ -213,11 +213,11 @@ header {
     line-height: 1.5;
   }
   .container-right{
-    flex-basis: 40%;
+    flex: 1;
   }
   
  .container-right-image {
-    width: 600px;
+    width: 100%;
     height: 100%;
     padding-right: 20px;
   }
@@ -285,17 +285,22 @@ header {
   /*image CSS starts*/
   .images {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .image-section {
+    display: flex;
+   max-width: 100vw;
   }
   
   .image-section img {
-    flex: 1;
-    max-width: 32.3%;
-    margin: 5.2px;
-    height: 450px;
-    
+    flex:1;
+    max-width: 33.33%;
+    height:auto;
+    padding: 0 4px;
   }
+  
   /*impact CSS ends*/
   /*donate CSS starts*/
   .donate {
@@ -490,18 +495,14 @@ button a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
-    
-}
+  }
   .content-2 {
     text-align: center; /* Center align the heading */
   }
-  
   .content-2 h2 {
     font-size: 2.9rem; /* Set the font size for the heading */
     padding:20px 0;
   }
-  
   .content-2 p {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -509,30 +510,109 @@ button a{
   }
   /*our story css*/
   .our-story {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .our-story-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .our-story-content {
-    grid-column: 1 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+   
   }
   
   .our-story-img {
-    grid-column: 2 / 3;
+    flex: 1 1 40%;
+    max-width: 100%;
+    margin-top: 10px;
+    float: right;
+  }
+  
+  .our-story-img img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .our-story-content {
+    flex: 1 1 60%;
+    margin-top: 10px;
+    margin-right: 10px;
+    
+  }
+  .our-story-content h1 {
+    font-size: 3.5rem;
+    color: #A1045A;
+  }
+  
+  .our-story-content p {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    padding-top: 5px;
+    color: #4C0121;
+    margin-bottom: 15px;
   }
   
   
+  
 
 
+.values {
+  display: flex;
+  justify-content: center; /* centers content horizontally */
+  align-items: center; /* centers content vertically */
+  text-align: center;
+  background-color: #A1045A;
+   color: white;
+}
 
-    /*projects CSS*/
+.values p {
+  max-width: 100%; /* ensures pre element does not exceed parent container width */
+  margin: 0; /* removes default margin */
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding-top: 20px;
+}
+
+.mission-2, .vision{
+  background-color: white;
+   display: flex;
+  justify-content: space-between;
+   align-items: center;
+   padding: 30px 0;
+  
+  }
+  .mission-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+  }
+  
+  .mission-content,.vision-content{
+    flex: 1;
+    padding: 0 20px; /* adjust as needed */
+    color: #4C0121;
+  }
+  .mission-content h1, .vision-content h1 {
+    font-size: 3rem;
+    color: #A1045A;
+  
+  }
+  .mission-content p, .vision-content p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding-top: 20px;
+  }
+  
+  .mission-img ,.vision-image {
+    flex-basis: 50%;
+    width: 100%;
+    height: 100%;
+    
+  }
+  .mission-img img , .vision-image img{
+    width:100%;
+    height:100%;
+  }
+/*projects CSS*/
     .welcome-to-projects {
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
       background-size: cover;
@@ -581,38 +661,43 @@ button a{
 /*mawimbi CSS end */
  /*mawimbi-image slider CSS starts*/
  .mawimbi-images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-  height: 1200px;
-  width: 100vw;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .carousel-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 
 .row {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  height: 600px;
-  width:100vw;
-}
-.carousel-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+  height: 50%;
+}
+
+.carousel-item {
+  flex: 1 0 calc(33.33% - 5px);
   height: 100%;
   object-fit: cover;
- 
+  margin-bottom: 5px;
+  overflow: hidden;
 }
 
 .carousel-item img {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 1005;
+  object-fit: cover;
 }
+
+
 
 /* mawimbi-image slider CSS ends */
 /*imarika CSS starts*/
@@ -641,15 +726,192 @@ button a{
     padding: 0 20px;
   }
   
-/*imarika CSS end */
+
 .imarika-image-kubwa img {
   width: 100vw;
   height: 600px;
   object-fit: cover;
 }
+/*imarika CSS end */
+/*donation CSS*/
+.call-to-action{
+  text-align: center;
+  background-color: #A1045A;
+  color: white;
+}
+.call-to-action-heading{
+  padding:30px 0;
+}
+.call-to-action-heading h1{
+  font-size: 2.5rem;
+}
+.get-involved{
+  height:300px;
+  
+}
+.get-involved h1{
+   text-align: center;
+   margin-top: 20px;
+   color: #A1045A;
+   font-size: 2.8rem;
+
+}
+.welcome-section-strip-2 {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15rem;
+}
+.welcome-section-strip-2 > div {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 0;
+  border:1px solid #4C0121;
+}
+
+.welcome-section-strip-2 .mission {
+  background-color: #663046
+}
+
+.welcome-section-strip-2 .projects {
+  background-color: #601a35
+}
+
+.welcome-section-strip-2 .volunteer {
+  background-color: #4d0f28;
+}
+
+.welcome-section-strip-2 h2 {
+  font-size: 1.6rem;
+  margin-top:15px;
+  padding-top: 5px;
+  color: white;
+  max-width:400px;
+}
+
+.welcome-section-strip-2 p{
+  font-size: 1.2rem;
+  color:white;
+  margin-top:10px;
+  text-align:center;
+  max-width: 400px;
+}
+.imarika-image-kubwa-2 img {
+  width: 100%;
+  max-width: 100%;
+  height: 600px;
+  object-fit: contain;
+  margin: 50px 0px;
+  
+}
+
+.donations{
+  padding-top:30px;
+ margin-bottom: 0px;
+  height:320px;
+  align-items: center;
+}
+.donations h1{
+  font-size: 2.7rem;
+  margin-bottom: 15px;
+}
+.donations p{
+   font-size: 1.4rem;
+  line-height: 1.25;
+  text-align: center;
+  margin: 10px 0;
+}
+.donations a{
+  color:white;
+  text-decoration: underline;
+}
+.donations ul li{
+ font-size: 1.3rem;
+  margin-top: 8px;
+  
+}
+.donations ul{
+  list-style-type: disc;
+}
+/* Contact Page CSS */
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+
+.contact-info {
+	flex-basis: 50%;
+	text-align: center;
+}
+
+.contact-info h2 {
+	margin-bottom: 20px;
+  color: #A1045A;
+  font-size: 2.5rem;
+}
+
+.contact-info ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.contact-info ul li {
+	margin-bottom: 10px;
+	font-size: 1.4re;
+}
+
+.contact-info ul li i {
+	margin-right: 10px;
+	color: #4C0121
+}
+
+.map {
+	flex-basis: 50%;
+}
+/*Sucess stories CSS in sucess.html*/
+.sucess {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* add box-shadow */
+  text-align: center; /* center align text */
+  max-width: 800px; /* set maximum width */
+  margin: auto; /* center the div horizontally */
+  display: flex; /* make the div flexible */
+  flex-direction: column; /* make the div's children stack vertically */
+  align-items: center; /* center the div's children horizontally */
+  justify-content: center; /* center the div's children vertically */
+  padding: 20px; /* add padding to the div */
+  margin-top:20px;
+}
+.sucess p{
+  font-size: 1.4rem;
+  color: #4C0121;
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.sucess h3{
+  color: #A1045A;
+  font-size: 1.2rem;
+}
+
+
+
 
   
   @media screen and (max-width: 768px) {
+    html{
+      font-size: 80%;
+    }
     #menu-bar {
       display: block;
     }
@@ -686,8 +948,79 @@ button a{
       
     }
     
+      .welcome-section-strip {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
     
-  }
+      .mission, .projects, .volunteer {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+        text-align: center;
+        height: 100%;
+      }
+      .mission h4, .projects h4, .volunteer  h4{
+        font-size: 1.2rem;
+      }
+      .mission h2, .projects h2, .volunteer  h2{
+        font-size: 1.4rem;
+      }
+      
+        .sucess-stories-container {
+          flex-direction: column;
+        }
+      
+        .container-left {
+          flex-basis: 100%;
+          text-align: center;
+          
+        }
+      
+        .container-right {
+          flex-basis: 100%;
+        }
+      
+        .container-right-image {
+          width: 100%;
+          height: auto;
+          padding: 0;
+          margin-top: 20px;
+        }
+        .impact-right-numbers {
+          display: flex;
+          flex-direction: column;
+        }
+        .impact-right-row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .impact-right-col {
+          width: 50%;
+          padding: 0 10px;
+          box-sizing: border-box;
+        }
+        .impact-count{
+          font-size: 2rem;
+        }
+        
+      
+      
+
+
+
+
+
+
+
+
+    }
+    
+    
+    
+  
   
   
   
@@ -696,4 +1029,7 @@ button a{
       display: none;
     }
   }
-  
+   @media screen and (max-width: 479px) { 
+
+    
+}
