@@ -1,666 +1,751 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
-*{
-	font-family: 'Nunito',sans-serif;
-	margin:0; padding: 0;
-	box-sizing: border-box;
-	outline: none; 
-    border:none;
-	text-decoration: none;
-	transition: all .2s linear;
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all .2s linear;
 }
-*::selection{
-	background:var(--red);
-	color: #fff;
+
+*::selection {
+  background: var(--red);
+  color: #fff;
 }
-html{
-	font-size: 100%;
-	overflow-x: hidden;
-	scroll-behavior: smooth;
-	scroll-padding-top:6rem;
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
-body{
-	background:#f7f7f7;
+
+body {
+  background: #f7f7f7;
+  max-width: 100vw;
 }
+
 /*header CSS starts*/
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-  }
-  
- .logo img{
-    height: 100px;
-    width:150px;
-    padding-top: 0px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  .navbar a {
-    text-decoration: none;
-    padding: 10px;
-    font-size: 1.1rem;
-    margin-left:20px;
-	color:white;
-  }
-  .navbar a:hover {
-    color: #A1045A;
-  }
-  
-  .navbar button {
-    background-color:white;
-    padding: 10px;
-    cursor: pointer;
-    margin-left:5px;
-    margin-right: 0px;
-    color: #A1045A;
-    font-weight: bold;
-    display: inline-block;
-    border:.2rem solid #4C0121 ;
-	font-size: 1.25rem;
-	border-radius: 0.25rem;
-	position: relative;
-	overflow: hidden;
-	z-index: 0;
-  }
-.navbar button::before{
-	content:'';
-	position: absolute;
-	top: 0; right: 0;
-	width: 0%;
-	height: 100%;
-	background:#A1045A;
-	transition: .3s linear;
-	z-index: -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
-.navbar button:hover::before{
-     
-     width: 100%;
-     left: 0;
-}
-.navbar button:hover{
-	color: white;
-}
-  
-  #menu-bar {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-    border:.1rem solid #666;
-	border-radius: .3rem;
-	padding: .5rem 1.5rem;
-  }
-  /*header CSS ends*/
-  /*welcome section  CSS starts*/
-  .welcome {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
-    background-size: cover;
-    height: 100vh;
-}
-  
-  .welcome-section-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-  .welcome-section-content h4{
-      color:white;
-  }
-  .welcome-section-content h1{
-       color: white;
-      font-size: 2.7rem;
-      padding-top: 10px;
-  }
-  
-  .welcome-section-strip {
-    display: flex;
-    justify-content: space-around;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 9.5rem;
-}
-  .welcome-section-strip > div {
-    width: 33.33%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    margin: 0;
-    border:1px solid #4C0121;
-  }
-  .welcome-section-strip > div:hover {
-    background-color: wheat;
-    transition: background-color 0.5s ease;
-  }
-  .welcome-section-strip .mission {
-    background-color: #FDF6E4;
-  }
-  
-  .welcome-section-strip .projects {
-    background-color: #FFF1E6;
-  }
-  
-  .welcome-section-strip .volunteer {
-    background-color: #FCFBFC;
-  }
-  
-  .welcome-section-strip h2 {
-    font-size: 2.4rem;
-    margin-top:15px;
-    padding-top: 5px;
-    color: #A1045A;
 
-  }
-  
-  .welcome-section-strip h4 {
-    font-size: 1.4rem;
-    color:#4C0121;
-    margin-top:10px;
+.logo img {
+  height: 100px;
+  width: 150px;
+  padding-top: 0px;
 }
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 100vw;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.1rem;
+  margin-left: 20px;
+  color: white;
+}
+
+.navbar a:hover {
+  color: #A1045A;
+}
+
+.navbar button {
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 0px;
+  color: #A1045A;
+  font-weight: bold;
+  display: inline-block;
+  border: .2rem solid #4C0121;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.navbar button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #A1045A;
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.navbar button:hover::before {
+
+  width: 100%;
+  left: 0;
+}
+
+.navbar button:hover {
+  color: white;
+}
+
+#menu-bar {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  border: .1rem solid #666;
+  border-radius: .3rem;
+  padding: .5rem 1.5rem;
+}
+
+/*header CSS ends*/
+/*welcome section  CSS starts*/
+.welcome {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.welcome-section-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.welcome-section-content h4 {
+  color: white;
+}
+
+.welcome-section-content h1 {
+  color: white;
+  font-size: 2.7rem;
+  padding-top: 10px;
+}
+
+.welcome-section-strip {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 9.5rem;
+}
+
+.welcome-section-strip>div {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 0;
+  border: 1px solid #4C0121;
+}
+
+.welcome-section-strip>div:hover {
+  background-color: wheat;
+  transition: background-color 0.5s ease;
+}
+
+.welcome-section-strip .mission {
+  background-color: #FDF6E4;
+}
+
+.welcome-section-strip .projects {
+  background-color: #FFF1E6;
+}
+
+.welcome-section-strip .volunteer {
+  background-color: #FCFBFC;
+}
+
+.welcome-section-strip h2 {
+  font-size: 2.4rem;
+  margin-top: 15px;
+  padding-top: 5px;
+  color: #A1045A;
+
+}
+
+.welcome-section-strip h4 {
+  font-size: 1.4rem;
+  color: #4C0121;
+  margin-top: 10px;
+}
+
 /*welcome section CSS ends*/
-  
+
 /*sucess stories CSS starts*/
 .sucess-stories {
-    background-color: #A1045A;;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-    
-}
-  .sucess-stories-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    
-  }
-  
-  .container-left {
-    flex:1;
-   padding-left:10px;
-}
-.container-left-heading  {
-    color: white;
-    font-weight: bold;
-    font-size: 4.5rem;
-    padding-bottom: 15px;
-    margin-bottom:15px;
-    margin-top:10px;
-}
-  .container-left-content{
-    margin-top:10px;
-  }
-  .container-left-content h2{
-    font-size: 2rem;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-  }
-  .container-left-content p{
-    font-size: 1.2rem;
-    margin-bottom: 35px;
-    line-height: 1.5;
-  }
-  .container-right{
-    flex: 1;
-  }
-  
- .container-right-image {
-    width: 100%;
-    height: 100%;
-    padding-right: 20px;
-  }
-  /*sucess stories CSS ends*/
-
-  /*impact CSS starts*/
-  .impact-box-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    
-  }
-  .impact-content-left {
-    margin: 10px 0;
-    flex-basis: 45%;
-}
-  .impact-content-left h1 {
-    margin-bottom: 50px;
-    font-size: 4.5rem;
-    text-transform: none;
-    font-weight: bold;
-    color: #4C0121;
-  }
-  .impact-content-left p {
-    line-height: 1.5;
-    font-size: 1.5rem;
-  }
-  .impact-right-numbers{
-    flex-basis: 45%;
-  }
-.impact-right-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 10px 0;
-  }
-  
-  .impact-right-col {
-    flex-basis: 33%;
-    text-align: center;
-    padding-left:1rem;
-  }
-  .impact-right-col p{
-    color: #4C0121;
-  }
-  
-  .impact-count {
-    font-size: 45px;
-    font-weight: bold;
-    color: #A1045A;
-  }
-  
-  hr {
-    border: 0;
-    border-top: 2px solid #ccc;
-    margin: 10px auto;
-    width: 80%;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  /*impact CSS ends*/
-  /*image CSS starts*/
-  .images {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .image-section {
-    display: flex;
-   max-width: 100vw;
-  }
-  
-  .image-section img {
-    flex:1;
-    max-width: 33.33%;
-    height:auto;
-    padding: 0 4px;
-  }
-  
-  /*impact CSS ends*/
-  /*donate CSS starts*/
-  .donate {
-    background-color: #A1045A;
-    color: white;
-    text-align: center;
-    padding: 50px;
-    margin-top: 50px;
-    
-  }
- .donate h4 {
-    margin-top: 0;
-    padding-bottom: 20px;
-  }
-  
-  .donate h1 {
-    font-weight: bold;
-    font-size: 65px;
-    text-transform: none;
-  }
-  
-  .donate-btn {
-    background-color:white;
-    color: #A1045A;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-weight: bold;
-    display: inline-block;
-	padding: .5rem 2rem;
-	border:.2rem solid #4C0121 ;
-	cursor: pointer;
-	font-size: 1.25rem;
-	border-radius: 0.25rem;
-	margin-top: 35px;
-	position: relative;
-	overflow: hidden;
-	z-index: 0;
-  }
-  .donate-btn::before{
-	content:'';
-	position: absolute;
-	top: 0; right: 0;
-	width: 0%;
-	height: 100%;
-	background:#A1045A;
-	transition: .3s linear;
-	z-index: -1;
-}
-.donate-btn:hover::before{
-     width: 100%;
-     left: 0;
-}
-.donate-btn:hover{
-	color: white;
-}
-/*donate CSS ends*/
-
-/*footer CSS starts*/
-  footer {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px;
-    flex-wrap: wrap;
-    margin-bottom: 0px;
-  }
-  
-  .footer-col {
-    flex: 1;
-    margin: 0 20px;
-    text-align: center;
-  }
-  
-  .footer-col h3 {
-    margin-bottom: 0;
-    height: 60px;
-    line-height: 60px;
-  }
-  .footer-col ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .footer-col ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-col ul li a{
-    text-decoration: none;
-    color:white;
-  }
-  
-
-  form{
-    flex: 1 1 30rem;
-   
-}
-
-form  input{
-    padding: 0.5rem;
-    margin: 0.3rem 0;
-    font-size: 1rem;
-    color: #333;
-    text-transform: none;
-    border:.1rem solid rgba(0,0,0,.3);
-    border-radius: .2rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-  
-.submit {
-    display: inline-block;
-	padding: .5rem 2rem;
-	border:.2rem solid #4C0121 ;
-	color: #A1045A;;
-	cursor: pointer;
-	font-size: 1rem;
-	border-radius: 0.25rem;
-	margin-top: 0.2rem;
-	position: relative;
-	overflow: hidden;
-	z-index: 0;
-    background-color: white;
-  }
-  
-.submit::before{
-	content:'';
-	position: absolute;
-	top: 0; right: 0;
-	width: 0%;
-	height: 100%;
-	background: #A1045A;;
-	transition: .3s linear;
-	z-index: -1;
-}
-.submit:hover::before{
-     
-     width: 100%;
-     left: 0;
-}
-.submit:hover{
-	color: white;
-}
-
-button a{
-	color: black;
-}
-  
-  .social-icons {
-    margin-top: 20px;
-  }
-  
-  .social-icons a {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .social-icons i {
-    font-size: 20px;
-    color: #fff;
-  }
-  
-  .copy {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .copy p {
-    font-size: 14px;
-    margin: 0;
-  }
-  
-  .copy hr {
-    border: 1px solid #fff;
-    margin-bottom: 10px;
-  }
-  /*footer CSS ends*/
-
-
-  /*aboutus CSS*/
-  /*sucess stories content-2 css*/
-  .who-we-are {
-    background-color: #A1045A;;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .content-2 {
-    text-align: center; /* Center align the heading */
-  }
-  .content-2 h2 {
-    font-size: 2.9rem; /* Set the font size for the heading */
-    padding:20px 0;
-  }
-  .content-2 p {
-    font-size: 1.5rem;
-    line-height: 1.5;
-    padding-bottom: 20px; /* Set the font size for the paragraph */
-  }
-  /*our story css*/
-  .our-story {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-   
-  }
-  
-  .our-story-img {
-    flex: 1 1 40%;
-    max-width: 100%;
-    margin-top: 10px;
-    float: right;
-  }
-  
-  .our-story-img img {
-    width: 100%;
-    height: 400px;
-    display: block;
-    margin-top: 10px;
-  }
-  
-  .our-story-content {
-    flex: 1 1 60%;
-    margin-top: 10px;
-    margin-right: 10px;
-    
-  }
-  .our-story-content h1 {
-    font-size: 3.5rem;
-    color: #A1045A;
-  }
-  
-  .our-story-content p {
-    font-size: 1.25rem;
-    line-height: 1.35;
-    padding-top: 5px;
-    color: #4C0121;
-    margin-bottom: 15px;
-  }
-  
-  
-  
-
-
-.values {
-  display: flex;
-  justify-content: center; /* centers content horizontally */
-  align-items: center; /* centers content vertically */
-  text-align: center;
   background-color: #A1045A;
-   color: white;
-}
-
-.values p {
-  max-width: 100%; /* ensures pre element does not exceed parent container width */
-  margin: 0; /* removes default margin */
-  font-size: 1.8rem;
-  line-height: 1.5;
-  padding-top: 20px;
-}
-
-.mission-2, .vision{
-  background-color: white;
-   display: flex;
-  justify-content: space-between;
-   align-items: center;
-   padding: 30px 0;
-  
-  }
-  .mission-container{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-   
-  }
-  
-  .mission-content,.vision-content{
-    flex: 1;
-    padding: 0 20px; /* adjust as needed */
-    color: #4C0121;
-  }
-  .mission-content h1, .vision-content h1 {
-    font-size: 3rem;
-    color: #A1045A;
-  
-  }
-  .mission-content p, .vision-content p{
-    font-size: 1.5rem;
-    line-height: 1.8;
-    padding-top: 20px;
-  }
-  
-  .mission-img ,.vision-image {
-    flex-basis: 50%;
-    width: 100%;
-    height: 100%;
-    
-  }
-  .mission-img img , .vision-image img{
-    width:100%;
-    height:100%;
-  }
-/*projects CSS*/
-    .welcome-to-projects {
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
-      background-size: cover;
-      height: 50vh;
-      position: relative; /* add position relative to set position absolute for .welcome-to-projects-content */
-    }
-    
-    .welcome-to-projects-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-    
-    .welcome-to-projects-content h1 {
-      color: white;
-      font-size: 3.5rem;
-      padding-top: 10px;
-    }
-/*mawimbi CSS starts*/
-.mawimbi {
-  background-color: #A1045A;;
+  ;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
- flex-direction: column;
+
 }
- .mawimbi h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  .mawimbi p {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    text-align: justify;
-    margin-bottom: 20px;
-    max-width: 1000px;
-    padding: 0 20px;
-  }
-  
+
+.sucess-stories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.container-left {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.container-left-heading {
+  color: white;
+  font-weight: bold;
+  font-size: 4.5rem;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.container-left-content {
+  margin-top: 10px;
+}
+
+.container-left-content h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.container-left-content p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.container-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+
+}
+
+.container-right-image {
+  width: 100%;
+  height: auto;
+  padding-right: 20px;
+
+
+}
+
+/*sucess stories CSS ends*/
+
+/*impact CSS starts*/
+.impact-box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.impact-content-left {
+  margin: 10px 0;
+  flex-basis: 45%;
+}
+
+.impact-content-left h1 {
+  margin-bottom: 50px;
+  font-size: 4.5rem;
+  text-transform: none;
+  font-weight: bold;
+  color: #4C0121;
+}
+
+.impact-content-left p {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.impact-right-numbers {
+  flex-basis: 45%;
+}
+
+.impact-right-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.impact-right-col {
+  flex-basis: 33%;
+  text-align: center;
+  padding-left: 1rem;
+}
+
+.impact-right-col p {
+  color: #4C0121;
+}
+
+.impact-count {
+  font-size: 45px;
+  font-weight: bold;
+  color: #A1045A;
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid #ccc;
+  margin: 10px auto;
+  width: 80%;
+}
+
+.center {
+  text-align: center;
+}
+
+/*impact CSS ends*/
+/*image CSS starts*/
+.images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.image-section {
+  display: flex;
+  max-width: 100vw;
+}
+
+.image-section img {
+  flex: 1;
+  max-width: 33.33%;
+  height: auto;
+  padding: 0 4px;
+}
+
+/*impact CSS ends*/
+/*donate CSS starts*/
+.donate {
+  background-color: #A1045A;
+  color: white;
+  text-align: center;
+  padding: 50px;
+  margin-top: 50px;
+
+}
+
+.donate h4 {
+  margin-top: 0;
+  padding-bottom: 20px;
+}
+
+.donate h1 {
+  font-weight: bold;
+  font-size: 65px;
+  text-transform: none;
+}
+
+.donate-btn {
+  background-color: white;
+  color: #A1045A;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  padding: .5rem 2rem;
+  border: .2rem solid #4C0121;
+  cursor: pointer;
+  font-size: 1.25rem;
+  border-radius: 0.25rem;
+  margin-top: 35px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.donate-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #A1045A;
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.donate-btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.donate-btn:hover {
+  color: white;
+}
+
+/*donate CSS ends*/
+
+/*footer CSS starts*/
+footer {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 0px;
+}
+
+.footer-col {
+  flex: 1;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.footer-col h3 {
+  margin-bottom: 0;
+  height: 60px;
+  line-height: 60px;
+}
+
+.footer-col ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+form {
+  flex: 1 1 30rem;
+
+}
+
+form input {
+  padding: 0.5rem;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  color: #333;
+  text-transform: none;
+  border: .1rem solid rgba(0, 0, 0, .3);
+  border-radius: .2rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.submit {
+  display: inline-block;
+  padding: .5rem 2rem;
+  border: .2rem solid #4C0121;
+  color: #A1045A;
+  ;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  margin-top: 0.2rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  background-color: white;
+}
+
+.submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: #A1045A;
+  ;
+  transition: .3s linear;
+  z-index: -1;
+}
+
+.submit:hover::before {
+
+  width: 100%;
+  left: 0;
+}
+
+.submit:hover {
+  color: white;
+}
+
+button a {
+  color: black;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons i {
+  font-size: 20px;
+  color: #fff;
+}
+
+.copy {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.copy p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.copy hr {
+  border: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+/*footer CSS ends*/
+
+
+/*aboutus CSS*/
+/*sucess stories content-2 css*/
+.who-we-are {
+  background-color: #A1045A;
+  ;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-2 {
+  text-align: center;
+  /* Center align the heading */
+}
+
+.content-2 h2 {
+  font-size: 2.9rem;
+  /* Set the font size for the heading */
+  padding: 20px 0;
+}
+
+.content-2 p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  padding-bottom: 20px;
+  /* Set the font size for the paragraph */
+}
+
+/*our story css*/
+.our-story {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 100vw;
+
+}
+
+.our-story-img {
+  flex: 1 1 40%;
+  max-width: 100%;
+  margin-top: 10px;
+  float: right;
+}
+
+.our-story-img img {
+  width: 100%;
+  height: 400px;
+  display: block;
+  margin-top: 10px;
+}
+
+.our-story-content {
+  flex: 1 1 60%;
+  margin-top: 10px;
+  margin-right: 10px;
+
+}
+
+.our-story h1 {
+  font-size: 3.5rem;
+  color: #A1045A;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.our-story-content p {
+  font-size: 1.25rem;
+  line-height: 1.35;
+  padding-top: 5px;
+  color: #4C0121;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+.values {
+  display: flex;
+  justify-content: center;
+  /* centers content horizontally */
+  align-items: center;
+  /* centers content vertically */
+  text-align: center;
+  background-color: #A1045A;
+  color: white;
+}
+
+.values p {
+  max-width: 100%;
+  /* ensures pre element does not exceed parent container width */
+  margin: 0;
+  /* removes default margin */
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding-top: 20px;
+}
+
+.mission-2,
+.vision {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+
+}
+
+.mission-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+}
+
+.mission-content,
+.vision-content {
+  flex: 1;
+  padding: 0 20px;
+  /* adjust as needed */
+  color: #4C0121;
+}
+
+.mission-content h1,
+.vision-content h1 {
+  font-size: 3rem;
+  color: #A1045A;
+
+}
+
+.mission-content p,
+.vision-content p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  padding-top: 20px;
+}
+
+.mission-img,
+.vision-image {
+  flex-basis: 50%;
+  width: 100%;
+  height: 100%;
+
+}
+
+.mission-img img,
+.vision-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/*projects CSS*/
+.welcome-to-projects {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/background.jpg') no-repeat center center;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+  /* add position relative to set position absolute for .welcome-to-projects-content */
+}
+
+.welcome-to-projects-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.welcome-to-projects-content h1 {
+  color: white;
+  font-size: 3.5rem;
+  padding-top: 10px;
+}
+
+/*mawimbi CSS starts*/
+.mawimbi {
+  background-color: #A1045A;
+  ;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  flex-direction: column;
+}
+
+.mawimbi h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mawimbi p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 20px;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
 /*mawimbi CSS end */
- /*mawimbi-image slider CSS starts*/
- .mawimbi-images {
+/*mawimbi-image slider CSS starts*/
+.mawimbi-images {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -708,54 +793,61 @@ button a{
   justify-content: space-between;
   align-items: center;
   padding: 50px 0;
- flex-direction: column;
+  flex-direction: column;
 }
- .imarika  h2 {
-    font-size: 3rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #A1045A;
-  }
-  
-  .imarika p {
-    font-size: 1.4rem;
-    line-height: 1.5;
-    text-align: justify;
-    margin-bottom: 10px;
-    max-width: 1000px;
-    padding: 0 20px;
-  }
-  
+
+.imarika h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #A1045A;
+}
+
+.imarika p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: justify;
+  margin-bottom: 10px;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
 
 .imarika-image-kubwa img {
   width: 100vw;
   height: 600px;
   object-fit: cover;
 }
+
 /*imarika CSS end */
 /*donation CSS*/
-.call-to-action{
+.call-to-action {
   text-align: center;
   background-color: #A1045A;
   color: white;
 }
-.call-to-action-heading{
-  padding:30px 0;
+
+.call-to-action-heading {
+  padding: 30px 0;
 }
-.call-to-action-heading h1{
+
+.call-to-action-heading h1 {
   font-size: 2.5rem;
 }
-.get-involved{
-  height:300px;
-  
-}
-.get-involved h1{
-   text-align: center;
-   margin-top: 20px;
-   color: #A1045A;
-   font-size: 2.8rem;
+
+.get-involved {
+  height: 300px;
 
 }
+
+.get-involved h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #A1045A;
+  font-size: 2.8rem;
+
+}
+
 .welcome-section-strip-2 {
   display: flex;
   justify-content: space-around;
@@ -765,14 +857,15 @@ button a{
   right: 0;
   height: 15rem;
 }
-.welcome-section-strip-2 > div {
+
+.welcome-section-strip-2>div {
   width: 33.33%;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   margin: 0;
-  border:1px solid #4C0121;
+  border: 1px solid #4C0121;
 }
 
 .welcome-section-strip-2 .mission {
@@ -788,248 +881,847 @@ button a{
 }
 
 .welcome-section-strip-2 h2 {
-  font-size: 1.6rem;
-  margin-top:15px;
-  padding-top: 5px;
+  font-size: 1.8rem;
+  margin-top: 15px;
+  padding-top: 10px;
   color: white;
-  max-width:400px;
-}
-
-.welcome-section-strip-2 p{
-  font-size: 1.2rem;
-  color:white;
-  margin-top:10px;
-  text-align:center;
   max-width: 400px;
 }
-.imarika-image-kubwa-2 img {
-  width: 100%;
-  max-width: 100%;
-  height: 600px;
-  object-fit: contain;
-  margin: 50px 0px;
-  
+
+.welcome-section-strip-2 p {
+  font-size: 1.4rem;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 400px;
 }
 
-.donations{
-  padding-top:30px;
- margin-bottom: 0px;
-  height:320px;
+.imarika-image-kubwa-2 img {
+  width: 100vw;
+  height: 600px;
+  object-fit: cover;
+
+}
+
+.donations {
+  padding-top: 5px;
+  margin-bottom: 0px;
+  height: 240px;
   align-items: center;
 }
-.donations h1{
-  font-size: 2.7rem;
-  margin-bottom: 15px;
+
+.donations-2 {
+  padding-top: 5px;
+  margin-bottom: 0px;
+  height: 310px;
+  align-items: center;
 }
-.donations p{
-   font-size: 1.4rem;
+
+.donations h1,
+.donations-2 h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+}
+
+.donations p,
+.donations-2 p {
+  font-size: 1.4rem;
   line-height: 1.25;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 0 3px;
 }
-.donations a{
-  color:white;
+
+.donations a {
+  color: white;
   text-decoration: underline;
 }
-.donations ul li{
- font-size: 1.3rem;
+
+.donations-2 ul li {
+  font-size: 1.3rem;
   margin-top: 8px;
-  
+
 }
-.donations ul{
+
+.donations-2 ul {
   list-style-type: disc;
 }
+
 /* Contact Page CSS */
 .container {
-	max-width: 1000px;
-	margin: 0 auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
 }
 
 .contact-info {
-	flex-basis: 50%;
-	text-align: center;
+  flex-basis: 50%;
+  text-align: center;
 }
 
 .contact-info h2 {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
   color: #A1045A;
   font-size: 2.5rem;
 }
 
 .contact-info ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contact-info ul li {
-	margin-bottom: 10px;
-	font-size: 1.4re;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 
 .contact-info ul li i {
-	margin-right: 10px;
-	color: #4C0121
+  margin-right: 10px;
+  color: #4C0121
 }
 
 .map {
-	flex-basis: 50%;
+  margin-top: 30px;
+  flex-basis: 50%;
 }
+
+.map iframe {
+  width: 100vw;
+  height: 600px;
+  /* You can adjust the height as needed */
+  border: 0;
+}
+
 /*Sucess stories CSS in sucess.html*/
 .sucess {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); /* add box-shadow */
-  text-align: center; /* center align text */
-  max-width: 800px; /* set maximum width */
-  margin: auto; /* center the div horizontally */
-  display: flex; /* make the div flexible */
-  flex-direction: column; /* make the div's children stack vertically */
-  align-items: center; /* center the div's children horizontally */
-  justify-content: center; /* center the div's children vertically */
-  padding: 20px; /* add padding to the div */
-  margin-top:20px;
+  /* add box-shadow */
+  text-align: center;
+  /* center align text */
+  max-width: 800px;
+  /* set maximum width */
+  margin: auto;
+  /* center the div horizontally */
+  display: flex;
+  /* make the div flexible */
+  flex-direction: column;
+  /* make the div's children stack vertically */
+  align-items: center;
+  /* center the div's children horizontally */
+  justify-content: center;
+  /* center the div's children vertically */
+  padding: 20px;
+  /* add padding to the div */
+  margin-top: 20px;
 }
-.sucess p{
+
+.sucess p {
   font-size: 1.4rem;
   color: #4C0121;
   line-height: 1.5;
   padding: 10px 0;
 }
-.sucess h3{
+
+.sucess h3 {
   color: #A1045A;
   font-size: 1.2rem;
 }
 
+/* Our team CSS*/
+.row-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.board-members-container h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #A1045A;
+  margin-top: 25px;
+  text-transform: capitalize;
+  padding-top: 10px;
+}
+
+.board-members {
+  margin-top: 20px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  height: 350px;
+  width: 32.3%;
+  border: 3px solid #A1045A;
+}
+
+.board-members .board-members-images {
+  background: #fff;
+  padding: 5px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 50%;
+  height: 40%;
+  transition: all 0.5s ease 0s;
+
+}
+
+.board-members-images img {
+  width: 100%;
+  height: 155%;
+  border-radius: 50%;
+  border: 1px solid #4C0121;
+}
+
+.board-members .name {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 4px;
+
+}
+
+.board-members .title {
+  font-weight: 600;
+  color: #2e282a;
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 0 0 7px 0;
+  text-align: center;
+}
+
+.board-members .post {
+  color: #4C0121;
+  text-transform: capitalize;
+  display: block;
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.board-members-container {
+  background-color: white;
+  max-width: 100vw;
+}
+
+/*Image slider CSS*/
+.slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-container {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  width: 600px;
 
 
+}
 
-  
-  @media screen and (max-width: 768px) {
-    html{
-      font-size: 80%;
-    }
-    #menu-bar {
-      display: block;
-    }
-    .navbar {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: white;
-      border-top: .1rem solid rgba(0, 0, 0, .1);
-      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-      display: none;
-    }
-    .navbar.active {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-      display: block;
-    }
-    .navbar a {
-      margin: 1.5rem;
-      padding: 1.5rem;
-      display: block;
-      border: .2rem solid rgba(0, 0, 0, .1);
-      background: black;
-      color: white;
-    }
-    button {
-      display: block;
-      margin: 1.5rem;
-      padding: 1.5rem;
-      border: .2rem solid rgba(0, 0, 0, .1);
-      background: black;
-      color: white;
-      cursor: pointer;
-      
-    }
-    
-      .welcome-section-strip {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-    
-      .mission, .projects, .volunteer {
-        width: 100%;
-        max-width: 300px;
-        margin-bottom: 20px;
-        text-align: center;
-        height: 100%;
-      }
-      .mission h4, .projects h4, .volunteer  h4{
-        font-size: 1.2rem;
-      }
-      .mission h2, .projects h2, .volunteer  h2{
-        font-size: 1.4rem;
-      }
-      
-        .sucess-stories-container {
-          flex-direction: column;
-        }
-      
-        .container-left {
-          flex-basis: 100%;
-          text-align: center;
-          
-        }
-      
-        .container-right {
-          flex-basis: 100%;
-        }
-      
-        .container-right-image {
-          width: 100%;
-          height: auto;
-          padding: 0;
-          margin-top: 20px;
-        }
-        .impact-right-numbers {
-          display: flex;
-          flex-direction: column;
-        }
-        .impact-right-row {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-        .impact-right-col {
-          width: 50%;
-          padding: 0 10px;
-          box-sizing: border-box;
-        }
-        .impact-count{
-          font-size: 2rem;
-        }
-        
-      
-      
+.slider img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
 
+}
 
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
 
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
 
+.slider-dot.active {
+  background-color: pink;
+}
 
+.awards-names p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #4C0121;
+  margin-top: 20px;
+  text-align: center;
+}
 
+.awards {
+  border: 3px solid #A1045A;
+  border-radius: 20px;
+  margin-top: 25px;
+}
 
+.awards h1 {
+  margin: 15px 0px;
+  text-align: center;
+  color: #A1045A;
+  font-size: 2.5rem;
+  padding: 10px 0;
 
-    }
-    
-    
-    
-  
-  
-  
-  
-  @media screen and (min-width: 768px) {
-    #menu-bar {
-      display: none;
-    }
+}
+
+@media screen and (max-width:1050px) {
+  .welcome {
+    position: relative;
+    z-index: 0;
   }
-   @media screen and (max-width: 479px) { 
 
-    
+  .logo img {
+    height: 90px;
+    width: 120px;
+    padding-top: 0px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 75%;
+    width: 40%;
+    background-color: #4C0121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    margin: 8px 0;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+  }
+
+  .navbar button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    background-color: #fff;
+    cursor: pointer;
+    border: .2rem solid #4C0121;
+  }
+
+  #menu-bar {
+    display: block;
+    position: absolute;
+    top: 1;
+    right: 0;
+    padding: 10px;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    width: 100px;
+  }
+
+  #menu-bar.close {
+    transform: rotate(180deg);
+  }
+
+ 
+  .get-involved {
+    height: 280px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+
+  }
+
+  .get-involved h1 {
+    text-align: center;
+    margin-top: 0px;
+    color: #A1045A;
+    font-size: 2.3rem;
+    margin-bottom: 0px;
+
+  }
+
+  .welcome-section-strip-2 {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .welcome-section-strip-2>div {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .welcome-section-strip-2 h2 {
+    font-size: 1.2rem;
+    color: white;
+    max-width: 400px;
+    padding: 0px;
+  }
+
+  .welcome-section-strip-2 p {
+    font-size: 1.1rem;
+    color: white;
+    margin: 5px 0px;
+    text-align: start;
+    max-width: 400px;
+  }
+
+  .navbar a {
+    padding: 8px;
+    font-size: 1.1rem;
+    margin-left: 10px;
+  }
+
+
+  .navbar button {
+    background-color: white;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: #A1045A;
+    font-weight: bold;
+    display: inline-block;
+    border: .2rem solid #4C0121;
+    font-size: 1.2rem;
+    border-radius: 0.25rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .imarika-image-kubwa-2 {
+    margin-top: 0;
+    height: 300px;
+  }
+
+  .imarika-image-kubwa-2 img {
+    height: 300px;
+    object-fit: contain;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+  .welcome {
+    position: relative;
+    z-index: 0;
+  }
+
+  .logo img {
+    height: 90px;
+    width: 120px;
+    padding-top: 0px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 75%;
+    width: 40%;
+    background-color: #4C0121;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    margin: 8px 0;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+  }
+
+  .navbar button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    background-color: #fff;
+    cursor: pointer;
+    border: .2rem solid #4C0121;
+  }
+
+  #menu-bar {
+    display: block;
+    position: absolute;
+    top: 1;
+    right: 0;
+    padding: 10px;
+    font-size: 2rem;
+    color: black;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    width: 50px;
+  }
+
+  #menu-bar.close {
+    transform: rotate(180deg);
+  }
+
+  
+
+
+  .welcome-section-strip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .welcome-section-strip-2 {
+    height: 17rem;
+  }
+
+  .mission,
+  .projects,
+  .volunteer {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    height: 100%;
+    text-align: center;
+
+  }
+
+  .mission h4,
+  .projects h4,
+  .volunteer h4 {
+    font-size: 1.4rem;
+    margin-top: 30px;
+  }
+
+  .mission h2,
+  .projects h2,
+  .volunteer h2 {
+    font-size: 1.6rem;
+    margin-top: 30px;
+  }
+
+  .sucess-stories-container {
+    flex-direction: column;
+  }
+
+  .container-left {
+    flex-basis: 100%;
+    text-align: center;
+
+  }
+
+  .container-right {
+    flex-basis: 100%;
+  }
+
+  .container-right-image {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .impact-right-numbers {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .impact-right-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .impact-right-col {
+    width: 50%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .impact-count {
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (min-width: 1050px) {
+  #menu-bar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 826px) {
+  .html {
+    font-size: 95%;
+  }
+
+  .welcome-section-content h1 {
+    color: white;
+    font-size: 2.5rem;
+    padding-top: 10px;
+  }
+
+  .welcome-section-strip h2 {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    padding-top: 5px;
+  }
+
+  /*.welcome-section-strip-2 h2 */
+  .welcome-section-strip h2 {
+    font-size: 1.5rem;
+  }
+
+  /*.welcome-section-strip-2 p ,*/
+  .welcome-section-strip h4 {
+    font-size: 1.4rem;
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .row-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .board-members {
+    height: 300px;
+    width: 50%;
+  }
+
+  .board-members .board-members-images {
+    background: #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 50%;
+    height: 40%;
+  }
+
+  .board-members-images img {
+    width: 100%;
+    height: 155%;
+  }
+  .welcome-section-strip h4 {
+    font-size: 1.38rem;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .board-members {
+    height: 350px;
+    width: 100%;
+  }
+
+  .board-members .board-members-images {
+    background: #fff;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 50%;
+    height: 40%;
+  }
+
+  .board-members-images img {
+    width: 100%;
+    height: 155%;
+  }
+
+  .donations-2 {
+    padding-top: 5px;
+    margin-bottom: 0px;
+    height: 340px;
+    align-items: center;
+
+  }
+
+  .donations p,
+  .donations-2 p {
+    font-size: 1.3rem;
+    line-height: 1.25;
+    text-align: center;
+    margin: 10px 0 0 3px;
+
+  }
+
+  .impact-box-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .impact-right-col {
+    flex-basis: 100%;
+  }
+
+  /*.welcome-section-strip-2 h2 */
+  .welcome-section-strip h2 {
+    font-size: 1.3rem;
+  }
+
+  /*.welcome-section-strip-2 p ,*/
+  .welcome-section-strip h4 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+  .board-members {
+    height: 350px;
+    width: 80%;
+  }
+
+  .board-members-images img {
+    width: 100%;
+    height: 155%;
+  }
+
+  .our-story-img {
+    width: 100vw;
+    margin-top: 10px;
+
+  }
+
+  .our-story-img img {
+    width: 100%;
+    height: 390px;
+    display: block;
+    margin: 10px 0px;
+
+  }
+
+  .our-story-content {
+    flex: 1 1 60%;
+    margin-top: 10px;
+    margin-right: 10px;
+
+  }
+
+  /*.welcome-section-strip-2 h2 */
+  .welcome-section-strip h2 {
+    font-size: 1.3rem;
+  }
+
+  /*.welcome-section-strip-2 p ,*/
+  .welcome-section-strip h4 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+  .impact-box-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .impact-right-col {
+    flex-basis: 100%;
+  }
+ 
+  .footer-col h3 {
+    margin: 10px 0;
+    height: 30px;
+    line-height: 20px;
+  }
+
+}
+
+@media screen and (max-width:300px) {
+  .logo img {
+    height: 80px;
+    width: 80px;
+    padding-top: 0px;
+  }
+
+  .donations-2 {
+    padding-top: 5px;
+    margin-bottom: 0px;
+    height: 350px;
+    margin-top: 3px;
+  }
+
+  .donations p,
+  .donations-2 p {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    text-align: center;
+    margin: 5px 0 0 3px;
+  }
+
+  .donations h1,
+  .donations-2 h1 {
+    font-size: 2.2rem;
+    margin-bottom: 3px;
+  }
+
+  .welcome-section-strip-2 h2,
+  .welcome-section-strip h2 {
+    font-size: 1.1rem;
+  }
+
+  .welcome-section-strip-2 p,
+  .welcome-section-strip h4 {
+    font-size: 1rem;
+  }
+
+  .contact-info ul li {
+    font-size: 1.1rem;
+  }
+
+  .mawimbi-content p {
+    font-size: 1.2rem;
+  }
+
+  .donate h1 {
+    font-weight: bold;
+    font-size: 50px;
+    text-transform: none;
+  }
+
+  .impact-box-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .impact-right-col {
+    flex-basis: 100%;
+  }
+
+
+
 }
