@@ -743,6 +743,13 @@ button a {
   padding: 0 20px;
 }
 
+.mawimbi-content a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+  padding-left: 2px;
+}
+
 /*mawimbi CSS end */
 /*mawimbi-image slider CSS starts*/
 .mawimbi-images {
@@ -998,6 +1005,9 @@ button a {
 
 /*Sucess stories CSS in sucess.html*/
 .sucess {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 1%;
+
   /* add box-shadow */
   text-align: center;
   /* center align text */
@@ -1238,7 +1248,7 @@ button a {
     transform: rotate(180deg);
   }
 
- 
+
   .get-involved {
     height: 280px;
     overflow: hidden;
@@ -1328,6 +1338,7 @@ button a {
   html {
     font-size: 80%;
   }
+
   .welcome {
     position: relative;
     z-index: 0;
@@ -1392,7 +1403,7 @@ button a {
     transform: rotate(180deg);
   }
 
-  
+
 
 
   .welcome-section-strip {
@@ -1535,6 +1546,7 @@ button a {
     width: 100%;
     height: 155%;
   }
+
   .welcome-section-strip h4 {
     font-size: 1.38rem;
     margin-top: 5px;
@@ -1652,7 +1664,7 @@ button a {
   .impact-right-col {
     flex-basis: 100%;
   }
- 
+
   .footer-col h3 {
     margin: 10px 0;
     height: 30px;
